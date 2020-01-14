@@ -31,11 +31,14 @@ export class RegistroComponent implements OnInit {
      }
 
   onEdit (empleado: Empleado){
-    this.empleadoService.selectedEmpleado = Object.assign({}, empleado); this.router.navigate(['/home']);
+    this.empleadoService.selectedEmpleado = Object.assign({}, empleado);
+    this.router.navigate(['/home']);
   }
 
   onDelete ($key: string){
-
-  }
+    if(confirm('Are you sure you want to delete it?')) {
+      this.empleadoService.deleteEmpleado($key);
+      //this.toastr.warning('Deleted Successfully', 'Product Removed');
+  }}
 
 }

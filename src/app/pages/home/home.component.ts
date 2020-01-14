@@ -25,7 +25,7 @@ export class HomeComponent{
   localidades = [];
   products: Array<object> = [];
 
-  constructor(private empleadoService: EmpleadoService, private httpClient: HttpClient) {}
+  constructor(public empleadoService: EmpleadoService, private httpClient: HttpClient) {}
 
   ngOnInit(){
    //inicializamos el servicio para crear el arreglo que contendra los datos del Formulario
