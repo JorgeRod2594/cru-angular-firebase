@@ -1,0 +1,125 @@
+<div class="container">
+      <div class="animate-top py-5 text-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/63/Ingress_Logo.png" class="navbar-brand-img" alt="..." height="72px">
+        <h2>Formulario de registro</h2>
+        <p class="lead">En este formulario usted podrá registrar nuevos empleados.</p>
+      </div>
+
+      <div class="row">
+        <div class="animate-bottom col-md-12 order-md-1">
+          <h4 class="mb-3">Datos del empleado</h4>
+          <form class="form " #FormEmpleado="ngForm" (ngSubmit)="onSubmit(FormEmpleado)">
+            <div class="row">
+              <div class="col-md-12 mb-3">
+                <label for="nombre">Nombre</label>
+                <input type="text" class="form-control" #nombre="ngModel" required [(ngModel)]="empleadoService.selectedEmpleado.nombre" name="nombre" pattern="[a-zA-Z ]+" placeholder="Nombre">
+                <div class="invalid-feedback">
+                  Digite su nombre.
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-8 mb-3">
+                <label for="email">Correo electrónico <span class="text-muted"></span></label>
+                <input type="email" class="form-control" #correo="ngModel" required [(ngModel)]="empleadoService.selectedEmpleado.correo" name="correo" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+" placeholder="correo@ejemplo.com">
+                <div class="invalid-feedback">
+                  Please enter a valid email address for shipping updates.
+                </div>
+              </div>
+
+              <div class="col-md-4 mb-3">
+                <label for="date">Fecha de nacimiento <span class="text-muted"></span></label>
+                <input type="date" class="form-control" #fechaNac="ngModel" required [(ngModel)]="empleadoService.selectedEmpleado.fechaNac" name="fechaNac">
+                <div class="invalid-feedback">
+                  Por favor digite una dirección de correo válida.
+                </div>
+              </div>
+            </div>
+<hr>
+            <div class="row">
+              <div class="col-md-10 mb-3">
+                <label for="email">Dirección <span class="text-muted"></span></label>
+                <input type="text" class="form-control" #direccion="ngModel" required [(ngModel)]="empleadoService.selectedEmpleado.direccion" name="direccion" pattern="[a-zA-Z ]+" placeholder="Calle / Avenida">
+                <div class="invalid-feedback">
+                  Digite su nombre.
+                </div>
+              </div>
+
+              <div class="col-md-2 mb-3">
+                <label for="numero">Número</label>
+                <input class="form-control" type="number" #numero="ngModel" required [(ngModel)]="empleadoService.selectedEmpleado.numero" name="numero" pattern="[0-9]+">
+                <div class="invalid-feedback">
+                  Dato faltante.
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-3 mb-3">
+                <label for="postal">Código postal</label>
+                <input type="text" value="{{products.cp}}" class="form-control" #cp="ngModel" [(ngModel)]="empleadoService.selectedEmpleado.cp" name="cp">
+                <div class="invalid-feedback">
+                  Código postal requerido.
+                </div>
+              </div>
+
+              <div class="col-md-2 mb-3">
+                <label for="domicilio">&nbsp;</label>
+                <button class="btn btn-secondary btn-block" type="button" (click)="getInfoCp()">Buscar</button>
+                <div class="invalid-feedback">
+                  Dato faltante
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-4 mb-3">
+                <label for="pais">País</label>
+                <input type="text" value="{{products.pais}}" class="form-control" #pais="ngModel" required [(ngModel)]="empleadoService.selectedEmpleado.pais" name="pais">
+                <div class="invalid-feedback">
+                  Por favor seleccione una opción.
+                </div>
+              </div>
+
+              <div class="col-md-4 mb-3">
+                <label for="estado">Estado</label>
+                <input type="text" value="{{products.estado}}" class="form-control" #estado="ngModel" required [(ngModel)]="empleadoService.selectedEmpleado.estado" name="estado">
+                <div class="invalid-feedback">
+                  Por favor seleccione una opción.
+                </div>
+              </div>
+
+              <div class="col-md-4 mb-3">
+                <label for="estado">Municipio</label>
+                <input type="text" value="{{products.municipio}}" class="form-control" #municipio="ngModel" required [(ngModel)]="empleadoService.selectedEmpleado.municipio" name="municipio">
+                <div class="invalid-feedback">
+                  Por favor seleccione una opción.
+                </div>
+              </div>
+            </div>
+
+
+            <hr class="mb-4">
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <button class="btn btn-secondary btn-lg btn-block" type="reset" (click)="resetForm(FormEmpleado)">Cancelar</button>
+              </div>
+              <div class="col-md-6 mb-3">
+                <button class="btn btn-primary btn-lg btn-block" type="submit">Guardar</button>
+              </div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+
+      <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">© 2017-2018 Company Name</p>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#">Privacy</a></li>
+          <li class="list-inline-item"><a href="#">Terms</a></li>
+          <li class="list-inline-item"><a href="#">Support</a></li>
+        </ul>
+      </footer>
+    </div>

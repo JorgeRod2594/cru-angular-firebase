@@ -1,0 +1,51 @@
+<nav class="navbar bar navbar-expand-lg navbar-light bg-white">
+      <div class="container">
+
+        <!-- Brand -->
+        <a class="navbar-brand" routerLink='/home'title="linklogo" (click)="ToggleNavBar()">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/63/Ingress_Logo.png" class="navbar-brand-img" alt="..." height="42px">
+        </a>
+
+        <!-- Toggler -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line" style="margin-bottom: 0;"></span>
+        </button>
+
+        <!-- Collapse -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+
+          <!-- Toggler -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fe fe-x"></i>
+          </button>
+
+          <!-- Navegacion -->
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item" [routerLinkActive]="['active']">
+              <a class="nav-link " routerLink='/home' title="link1" (click)="ToggleNavBar()">
+                Inicio
+              </a>
+
+            </li>
+
+            <li class="nav-item" [routerLinkActive]="['active']">
+              <a class="nav-link " routerLink='/registro-empleados' title="link2" (click)="ToggleNavBar()">
+                Empleados registrados
+              </a>
+
+            </li>
+
+
+          </ul>
+
+          <!-- Button -->
+          <a class="navbar-btn btn btn-sm btn-primary lift ml-auto" href="#" target="_blank">
+            Comprar ahora
+          </a>
+
+        </div>
+
+      </div>
+    </nav>

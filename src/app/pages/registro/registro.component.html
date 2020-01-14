@@ -1,0 +1,47 @@
+<div class="container">
+      <div class="animate-top py-5 text-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/63/Ingress_Logo.png" class="navbar-brand-img" alt="..." height="72px">
+        <h2>Registro de usuarios</h2>
+        <p class="lead">En este formulario contiene los empleados registrados.</p>
+      </div>
+
+      <!--<div class="row">-->
+        <div class="animate-bottom col-md-12 order-md-1 table-responsive">
+
+          <table class="table table-table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Correo electronico</th>
+                <th>Fecha de nacimiento</th>
+                <th>Direccion</th>
+                <th>Numero</th>
+                <th>CP</th>
+                <th>Pais</th>
+                <th>Estado</th>
+                <th>Municipio</th>
+                <th>&nbsp;</th>
+                <th>&nbsp;</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr *ngFor="let emp of empleadosList">
+                <td>{{emp.nombre}}</td>
+                <td>{{emp.correo}}</td>
+                <td>{{emp.fechaNac}}</td>
+                <td>{{emp.direccion}}</td>
+                <td>{{emp.numero}}</td>
+                <td>{{emp.cp}}</td>
+                <td>{{emp.pais}}</td>
+                <td>{{emp.estado}}</td>
+                <td>{{emp.municipio}}</td>
+                <td><a class="btn btn-secondary text-white" routerLink='/home' type="button" name="button" (click)="onEdit(product)">Editar</a></td>
+                <td><a class="btn btn-danger text-white" type="button" name="button" (click)="onDelete(product.$key)">Eliminar</a></td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+      <!--</div>-->
+</div>

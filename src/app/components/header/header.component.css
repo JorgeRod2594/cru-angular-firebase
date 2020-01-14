@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+.navbar-brand{
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+.navbar-toggler{
+    width: 47px;
+    height: 34px;
+    /*background-color: #7eb444;*/
+    border:none;
+}
+.navbar-toggler .line{
+    width: 100%;
+    float: left;
+    height: 2px;
+    background-color: #fff;
+    margin-bottom: 5px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+}
+
+.bar{
+    position: fixed;
+    z-index: 10;
+    background: #154360!important;
+    width: 100%;
+    height: auto;
+}
+
+element.style {
+}
+.btn:not([class*=btn-outline]) {
+    border-color: transparent!important;
+}
+.lift {
+    -webkit-transition: box-shadow .25s ease,-webkit-transform .25s ease;
+    transition: box-shadow .25s ease,-webkit-transform .25s ease;
+    transition: box-shadow .25s ease,transform .25s ease;
+    transition: box-shadow .25s ease,transform .25s ease,-webkit-transform .25s ease;
+}
+.ml-auto, .mx-auto {
+    margin-left: auto!important;
+}
+.btn-group-sm>.btn, .btn-sm {
+    padding: .5625rem 1rem;
+    font-size: 1.0625rem;
+    line-height: 1.3;
+    border-radius: .375rem;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #335eea;
+    border-color: #335eea;
+    box-shadow: none;
+}
+.btn{
+    display: inline-block;
+    font-weight: 600;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    padding: .8125rem 1.25rem;
+    font-size: 1.0625rem;
+    line-height: 0.9;
+    border-radius: .375rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
