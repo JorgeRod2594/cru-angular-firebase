@@ -14,6 +14,7 @@ import { EmpleadoService } from './services/empleado.service'
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from '../environments/environment';
+import { FooterComponent } from './components/footer/footer/footer.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { environment } from '../environments/environment';
     AppComponent,
     HomeComponent,
     RegistroComponent,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
