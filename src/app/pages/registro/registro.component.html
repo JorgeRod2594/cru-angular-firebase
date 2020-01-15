@@ -36,8 +36,12 @@
                 <td>{{emp.pais}}</td>
                 <td>{{emp.estado}}</td>
                 <td>{{emp.municipio}}</td>
-                <td><a class="btn btn-secondary text-white" routerLink='/home' type="button" name="button" (click)="onEdit(product)">Editar</a></td>
-                <td><a class="btn btn-danger text-white" type="button" name="button" (click)="onDelete(product.$key)">Eliminar</a></td>
+                <td>
+                  <a class="btn btn-secondary text-white" type="button" name="button" (click)="onEdit(emp)">Editar</a>
+                </td>
+                <td>
+                  <a class="btn btn-danger text-white" type="button" name="button" (click)="onDelete(emp.$key)">Eliminar</a>
+                </td>
               </tr>
             </tbody>
           </table>

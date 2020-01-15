@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 import { Empleado } from '../../model/empleado.model';
+import {  Router } from '@angular/router';
 
 //imortamos el servicio creado
 import { EmpleadoService} from '../../services/empleado.service';
@@ -25,7 +26,7 @@ export class HomeComponent{
   localidades = [];
   products: Array<object> = [];
 
-  constructor(public empleadoService: EmpleadoService, private httpClient: HttpClient) {}
+  constructor(private empleadoService: EmpleadoService, private httpClient: HttpClient,private router: Router) {}
 
   ngOnInit(){
    //inicializamos el servicio para crear el arreglo que contendra los datos del Formulario
@@ -38,6 +39,7 @@ export class HomeComponent{
     //insertamos el nuevo empleado mediante el servicio
     this.empleadoService.insertEmpleado(FormEmpleado.value);
     this.resetForm(FormEmpleado);//recibe el formulario para despues limpiarlo
+    this.router.navigate(['/registro-empleados']);
   }
 
   resetForm(FormEmpleado?: NgForm){ //mediante ? indicamos que FormEmpleado puede ser opcional
